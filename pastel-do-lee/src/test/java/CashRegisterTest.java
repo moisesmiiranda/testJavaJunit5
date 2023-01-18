@@ -22,6 +22,9 @@ public class CashRegisterTest {
                 .sale(sale)
                 .amountReceived(new BigDecimal("13.50"))
                 .build();
+
+
+        
         // Act -> Is the call to scenario
 
         // Assert -> check the result of this test
