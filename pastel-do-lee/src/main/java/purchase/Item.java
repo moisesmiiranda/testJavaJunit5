@@ -1,4 +1,4 @@
-package compra;
+package purchase;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

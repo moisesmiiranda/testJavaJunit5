@@ -1,5 +1,5 @@
-import compra.Item;
-import compra.Sale;
+import purchase.Item;
+import purchase.Purchase;
 import models.CashRegisterModel;
 import org.junit.jupiter.api.Test;
 
@@ -16,16 +16,16 @@ public class CashRegisterTest {
 
         List<Item> listOfItens = Arrays.asList(pastelDeCarne, pastelDeFlango);
 
-        var sale = Sale.builder().itens(listOfItens).build();
+        var sale = Purchase.builder().itens(listOfItens).build();
 
         var cashRegister = CashRegisterModel.buildScenario()
-                .sale(sale)
+                .purchase(sale)
                 .amountReceived(new BigDecimal("13.50"))
                 .build();
 
-
-        
         // Act -> Is the call to scenario
+
+        cashRegister.completSale();
 
         // Assert -> check the result of this test
     }
